@@ -1,166 +1,665 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>I Jornada de Estudos Linguísticos - FCI</title>
+
     
+
+    <!-- --- BIBLIOTECAS EXTERNAS --- -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     
+
+    <!-- --- BLOCO 1: CSS (ESTILIZAÇÃO) --- -->
+
     <style>
+
         body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
         .font-serif { font-family: 'Playfair Display', serif; }
+
         .fci-red { color: #dc2626; }
+
         .bg-fci-red { background-color: #dc2626; }
+
         .bg-fci-navy { background-color: #1e293b; }
+
+        
+
+        /* Estilo para as abas de edição */
+
         .edition-btn.active { background-color: white; color: #dc2626; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+
         .tab-content { display: none; }
+
         .tab-content.active { display: block; }
+
+        
+
+        /* Personalização de timeline */
+
         .timeline-dot { position: absolute; left: -5px; top: 5px; width: 10px; height: 10px; border-radius: 50%; }
+
+        
+
+        /* Smooth transition para links */
+
         a { transition: all 0.3s ease; }
+
     </style>
+
 </head>
+
 <body class="bg-slate-50 text-slate-900">
 
+
+
+    <!-- --- BLOCO 2: HTML (ESTRUTURA) --- -->
+
+
+
+    <!-- Navegação -->
+
     <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-20 items-center">
+
             <div class="flex items-center gap-3">
+
                 <div class="bg-fci-red text-white p-2 rounded-lg font-bold text-xl shadow-lg">FCI</div>
+
                 <div class="hidden sm:block">
+
                     <span class="font-bold text-slate-800 block leading-tight tracking-tighter text-sm">Jornada Linguística</span>
+
                     <span id="nav-edition-label" class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Edição 2026</span>
+
                 </div>
+
             </div>
+
+
+
+            <!-- Seletor de Edição -->
 
             <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
+
                 <button onclick="switchEdition('2026')" id="btn-2026" class="edition-btn active px-4 py-1.5 rounded-lg text-xs font-bold transition-all">2026</button>
+
                 <button onclick="switchEdition('2027')" id="btn-2027" class="edition-btn px-4 py-1.5 rounded-lg text-xs font-bold transition-all">2027</button>
+
             </div>
+
+
 
             <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold">
+
                 <a href="#programacao" class="hover:text-fci-red transition">Programação</a>
+
                 <a href="#submissoes" class="hover:text-fci-red transition">Submissões</a>
+
                 <a href="#comissao" class="hover:text-fci-red transition">Comissão</a>
+
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSferoaONn60xAH2aMKEnrgzauwm7Fx71kI0RW21eQUzfKJEWA/viewform?usp=sharing" target="_blank" class="bg-fci-red text-white px-6 py-2.5 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-100">Inscrição</a>
+
             </div>
+
         </div>
+
     </nav>
 
+
+
+    <!-- CONTEÚDO DA EDIÇÃO 2026 -->
+
     <div id="edition-2026" class="tab-content active">
+
+        <!-- Hero -->
+
         <header class="bg-fci-navy py-28 px-4 relative overflow-hidden text-center text-white">
+
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+
             <div class="relative z-10 max-w-4xl mx-auto">
+
                 <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">I Jornada de Estudos Linguísticos</h1>
+
                 <p class="text-xl md:text-2xl text-red-400 font-medium mb-10 italic font-serif">"O profissional de letras: caminhos para o futuro"</p>
+
                 <div class="flex flex-wrap justify-center gap-4 text-white/80">
+
                     <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-2 rounded-xl text-sm">
+
                         <i class="fa-regular fa-calendar text-fci-red"></i> 21, 22 e 23 de maio de 2026
+
                     </div>
+
                     <div class="flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-2 rounded-xl text-sm">
+
                         <i class="fa-solid fa-location-dot text-fci-red"></i> presencial e online
+
                     </div>
+
                 </div>
+
             </div>
+
         </header>
 
-        <section id="programacao" class="py-24 bg-slate-100 px-4">
-            <div class="max-w-7xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-16 italic font-serif tracking-tight">Programação</h2>
-                <div class="grid lg:grid-cols-3 gap-8 text-left">
-                    
-                    <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-fci-red flex flex-col h-full">
-                        <span class="text-[10px] font-black uppercase text-fci-red bg-red-50 px-3 py-1 rounded-full w-fit mb-4">Presencial</span>
-                        <h3 class="text-xl font-bold mb-6">21 de maio (quinta)</h3>
-                        <div class="space-y-4">
-                            <div class="pl-4 border-l-2 border-slate-100 relative">
-                                <div class="timeline-dot bg-fci-red"></div>
-                                <p class="text-xs font-bold text-slate-400">09:00</p>
-                                <p class="text-sm font-bold">Abertura: Isabela Villas Boas</p>
-                            </div>
-                            <div class="pl-4 border-l-2 border-slate-100 relative">
-                                <div class="timeline-dot bg-fci-red"></div>
-                                <p class="text-xs font-bold text-slate-400">09:30</p>
-                                <p class="text-sm font-bold">Cora em Verso</p>
-                                <p class="text-[10px] text-slate-500 italic">Gisela Belluzzo de Almeida Salles</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-blue-600 flex flex-col h-full">
-                        <span class="text-[10px] font-black uppercase text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-fit mb-4">Online</span>
-                        <h3 class="text-xl font-bold mb-6">22 de maio (sexta)</h3>
-                        <div class="space-y-4">
-                            <div class="pl-4 border-l-2 border-slate-100 relative">
-                                <div class="timeline-dot bg-blue-600"></div>
-                                <p class="text-xs font-bold text-slate-400">11:00</p>
-                                <p class="text-sm font-bold">O legado de Cora Coralina</p>
-                                <p class="text-[10px] text-slate-500">Gisela Belluzzo de Almeida Salles</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-slate-800 flex flex-col h-full">
-                        <span class="text-[10px] font-black uppercase text-slate-400 bg-slate-100 px-3 py-1 rounded-full w-fit mb-4">Online</span>
-                        <h3 class="text-xl font-bold mb-6">23 de maio (sábado)</h3>
-                        <div class="space-y-4">
-                            <div class="pl-4 border-l-2 border-slate-100 relative">
-                                <div class="timeline-dot bg-slate-800"></div>
-                                <p class="text-xs font-bold text-slate-400">09:00</p>
-                                <p class="text-sm font-bold">Gerenciamento de projetos: Carolina Bisson</p>
-                            </div>
+        <!-- Eixos Temáticos -->
+
+        <section id="submissoes" class="py-24 px-4 max-w-7xl mx-auto">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <div>
+
+                    <h2 class="text-4xl font-black text-slate-900 mb-8 border-l-8 border-fci-red pl-6 tracking-tighter">Eixos temáticos</h2>
+
+                    <div class="grid gap-4">
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-fci-red transition-colors">
+
+                            <span class="font-bold text-fci-red bg-red-50 w-8 h-8 rounded flex items-center justify-center">1</span>
+
+                            <span class="font-semibold text-sm">Estudos linguísticos, inovação e tecnologia</span>
+
                         </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-fci-red transition-colors">
+
+                            <span class="font-bold text-fci-red bg-red-50 w-8 h-8 rounded flex items-center justify-center">2</span>
+
+                            <span class="font-semibold text-sm">Ensino de línguas</span>
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-fci-red transition-colors">
+
+                            <span class="font-bold text-fci-red bg-red-50 w-8 h-8 rounded flex items-center justify-center">3</span>
+
+                            <span class="font-semibold text-sm">Estudos literários</span>
+
+                        </div>
+
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-fci-red transition-colors">
+
+                            <span class="font-bold text-fci-red bg-red-50 w-8 h-8 rounded flex items-center justify-center">4</span>
+
+                            <span class="font-semibold text-sm">Tradução</span>
+
+                        </div>
+
                     </div>
 
                 </div>
+
+                <div class="bg-slate-900 rounded-[3rem] p-12 text-white shadow-2xl">
+
+                    <h3 class="text-3xl font-black mb-6 italic tracking-tight">Call for Papers</h3>
+
+                    <p class="text-slate-400 mb-8 font-light">Submissão de resumos para pôsteres e comunicações orais aberta a estudantes e pesquisadores.</p>
+
+                    <div class="bg-white/5 p-4 rounded-xl mb-8 border border-white/10 text-center">
+
+                        <p class="text-xs uppercase font-bold text-red-500 tracking-widest mb-1">Data limite</p>
+
+                        <p class="text-2xl font-bold italic text-white">08 de maio de 2026</p>
+
+                    </div>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSferoaONn60xAH2aMKEnrgzauwm7Fx71kI0RW21eQUzfKJEWA/viewform?usp=sharing" target="_blank" class="block w-full bg-white text-slate-900 py-4 rounded-2xl font-bold text-center hover:bg-slate-100 transition shadow-xl uppercase tracking-widest text-xs">formulário de inscrição</a>
+
+                </div>
+
             </div>
+
         </section>
 
-        <section id="comissao" class="py-24 bg-white">
-            <div class="max-w-xl mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold mb-12 italic font-serif">Comissão organizadora</h2>
-                
-                <div class="flex flex-col gap-4">
-                    <div class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold">Prof.ª Daniela Antoniazi</div>
-                    <div class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold">Prof. Luciano Alves Bezerra</div>
-                    <div class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold">Prof. Marcos Polifemi</div>
-                    <div class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold">Prof.ª Maria Rita Köster</div>
-                    <div class="p-4 border border-slate-100 rounded-2xl bg-white font-bold text-fci-red border-fci-red/20 shadow-sm">Prof.ª Simone Resende</div>
+
+
+        <!-- Programação Atualizada -->
+
+        <section id="programacao" class="py-24 bg-slate-100 px-4">
+
+            <div class="max-w-7xl mx-auto text-center">
+
+                <h2 class="text-3xl font-bold mb-16 italic font-serif tracking-tight">Programação</h2>
+
+                <div class="grid lg:grid-cols-3 gap-8 text-left">
+
+                    <!-- Dia 21 (Quinta) -->
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-fci-red flex flex-col h-full">
+
+                        <span class="text-[10px] font-black uppercase text-fci-red bg-red-50 px-3 py-1 rounded-full w-fit mb-4">Presencial</span>
+
+                        <h3 class="text-xl font-bold mb-6">21 de maio (quinta)</h3>
+
+                        <div class="space-y-4">
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">08:00</p>
+
+                                <p class="text-sm font-bold">Boas-vindas</p>
+
+                                <p class="text-[10px] text-slate-500">Auditório</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">08:15</p>
+
+                                <p class="text-sm font-bold text-fci-red">Credenciamento</p>
+
+                                <p class="text-[10px] text-slate-500 italic">Hall da cantina</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">08:30</p>
+
+                                <p class="text-sm font-bold">Apresentação de pôsteres</p>
+
+    <p class="text-[10px] text-slate-500 italic">Hall da cantina</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">09:00</p>
+
+                                <p class="text-sm font-bold italic">Abertura: Isabela Villas Boas</p>
+
+  <p class="text-[10px] text-slate-500 italic">Auditório</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">09:30</p>
+
+                                <p class="text-sm font-bold">Palestra: Cora em Verso: uma homenagem a memória e ao legado da Cora Coralina</p>
+
+                                <p class="text-[10px] text-slate-500">Gisela Belluzzo de Almeida Salles</p>
+
+<p class="text-[10px] text-slate-500">As Coras: conexões femininas</p>
+
+  <p class="text-[10px] text-slate-500 italic">Auditório</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-300 relative bg-slate-50 p-2 rounded-r-lg">
+
+                                <div class="timeline-dot bg-slate-400"></div>
+
+                                <p class="text-xs font-bold text-slate-500 uppercase tracking-tighter">10:30 (Atividades Extensionistas)</p>
+
+                                <div class="mt-2 space-y-2">
+
+                                    <p class="text-[11px] leading-tight"><strong>MultiTechLin</strong> Marcos Polifemi - sala 8</p>
+
+                                    <p class="text-[11px] leading-tight"><strong>GET Tradução:</strong> Simone Resende - sala 7</p>
+
+                                    <p class="text-[11px] leading-tight"><strong>Cliffhanger:</strong> Maria Rita Köster - sala 6</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">11:30</p>
+
+                                <p class="text-sm font-bold">Palestra</p>
+
+<p class="text-[10px] text-slate-500 italic">Auditório</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">20:00</p>
+
+                                <p class="text-sm font-bold">Sessões de comunicações orais</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Dia 22 (Sexta) -->
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-blue-600 flex flex-col h-full">
+
+                        <span class="text-[10px] font-black uppercase text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-fit mb-4">Online</span>
+
+                        <h3 class="text-xl font-bold mb-6">22 de maio (sexta)</h3>
+
+                        <div class="space-y-4">
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-slate-300"></div>
+
+                                <p class="text-xs font-bold text-slate-400">08:00</p>
+
+                                <p class="text-sm font-bold italic text-slate-400">Palestra</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-blue-600"></div>
+
+                                <p class="text-xs font-bold text-slate-400">09:00</p>
+
+                                <p class="text-sm font-bold">Ensinando inglês para tradutores</p>
+
+                                <p class="text-[10px] text-slate-500">Jane Cury</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-blue-600"></div>
+
+                                <p class="text-xs font-bold text-slate-400">10:00</p>
+
+                                <p class="text-sm font-bold">Decolonialidade</p>
+
+                                <p class="text-[10px] text-slate-500">Ana Paula Duboc</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-slate-300"></div>
+
+                                <p class="text-xs font-bold text-slate-400">11:00</p>
+
+                               <p class="text-sm font-bold">/p>O legado de Cora Coralina</p>
+
+<p class="text-[10px] text-slate-500">Gisela Belluzzo de Almeida Salle</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-blue-600"></div>
+
+                                <p class="text-xs font-bold text-slate-400">11:30 - 12:30</p>
+
+                                <p class="text-sm font-bold">Sessões de comunicações orais</p>
+
+                                <p class="text-[10px] text-slate-500 italic">20 min cada</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Dia 23 (Sábado) -->
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-slate-800 flex flex-col h-full">
+
+                        <span class="text-[10px] font-black uppercase text-slate-400 bg-slate-100 px-3 py-1 rounded-full w-fit mb-4">Online</span>
+
+                        <h3 class="text-xl font-bold mb-6">23 de maio (sábado)</h3>
+
+                        <div class="space-y-4">
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-slate-800"></div>
+
+                                <p class="text-xs font-bold text-slate-400">09:00</p>
+
+                                <p class="text-sm font-bold text-slate-800">Carolina Bisson: Gerenciamento de projetos de tradução</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-slate-800"></div>
+
+                                <p class="text-xs font-bold text-slate-400">10:00</p>
+
+                                <p class="text-sm font-bold">Sessões de comunicações orais</p>
+
+                            </div>
+
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+
+                                <div class="timeline-dot bg-fci-red"></div>
+
+                                <p class="text-xs font-bold text-slate-400">12:00</p>
+
+                                <p class="text-sm font-bold text-fci-red uppercase tracking-widest italic">Encerramento</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div class="mt-16 pt-8 border-t border-slate-100">
-                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.3em] mb-3">Coordenação Geral</p>
-                    <p class="text-xl font-black text-slate-800 mb-6">Prof.ª Cassia Venezuela</p>
+            </div>
+
+        </section>
+
+
+
+        <!-- Comissão Organizadora e Monitoria Alinhada -->
+
+        <section id="comissao" class="py-24 bg-white">
+
+            <div class="max-w-xl mx-auto px-4 text-center">
+
+                <h2 class="text-3xl font-bold mb-12 italic font-serif">Comissão organizadora</h2>
+
+                
+
+                <div class="flex flex-col gap-4">
+
+                    <!-- Nomes alinhados verticalmente -->
+
+                    <div class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold hover:shadow-md transition-all">
+
+                        Prof.ª Daniela Antoniazi
+
+                    </div>
+
                     
-                    <div class="bg-red-50 py-4 px-6 rounded-xl block text-center">
-                        <div class="flex justify-center items-center gap-2 mb-2">
-                            <i class="fa-solid fa-user-graduate text-fci-red text-xs"></i>
-                            <p class="text-sm font-bold text-slate-700">Monitoria:</p>
-                        </div>
-                        <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm font-black text-slate-900">
+
+                    <a href="http://lattes.cnpq.br/1024279460376261" target="_blank" rel="noopener noreferrer" 
+
+                       class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold hover:shadow-md transition-all hover:text-fci-red hover:border-fci-red/20">
+
+                        Prof. Luciano Alves Bezerra
+
+                    </a>
+
+                    
+
+                    <a href="http://lattes.cnpq.br/8684370230045655" target="_blank" rel="noopener noreferrer" 
+
+                       class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold hover:shadow-md transition-all hover:text-fci-red hover:border-fci-red/20">
+
+                        Prof. Marcos Polifemi
+
+                    </a>
+
+                    
+
+                    <div class="p-4 border border-slate-100 rounded-2xl bg-slate-50 font-bold hover:shadow-md transition-all">
+
+                        Prof.ª Maria Rita Köster
+
+                    </div>
+
+                    
+
+                    <a href="http://lattes.cnpq.br/9894444190298115" target="_blank" rel="noopener noreferrer" 
+
+                       class="p-4 border border-slate-100 rounded-2xl bg-white font-bold text-fci-red shadow-sm border-fci-red/10 hover:shadow-md transition-all underline decoration-red-200 underline-offset-4">
+
+                        Prof.ª Simone Resende
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Coordenação e Monitoria no final da lista -->
+
+                <div class="mt-16 pt-8 border-t border-slate-100">
+
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.3em] mb-3">Coordenação Geral</p>
+
+                    <a href="http://lattes.cnpq.br/1641171570835144" target="_blank" rel="noopener noreferrer" 
+
+                       class="text-xl font-black text-slate-800 hover:text-fci-red transition-colors block mb-6">
+
+                        Prof.ª Cassia Venezuela
+
+                    </a>
+
+                    
+
+                    <div class="bg-red-50 py-3 px-6 rounded-xl inline-flex items-center gap-3">
+
+                        <i class="fa-solid fa-user-graduate text-fci-red text-xs"></i>
+
+                        <p class="text-sm font-bold text-slate-700">Monitoria:
+
+<div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm font-black text-slate-900">
                             <span>Ana Sara Alves,</span>
                             <span>Luisa Rechtman,</span>
                             <span>Marcela Souza,</span>
                             <span>Ana Brito,</span>
                             <span>Laura Souza,</span>
                             <span>Luiza Baldo</span>
-                        </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
+
     </div>
 
+
+
+    <!-- CONTEÚDO DA EDIÇÃO 2027 -->
+
+    <div id="edition-2027" class="tab-content py-48 text-center px-4">
+
+        <i class="fa-solid fa-hourglass-start text-6xl text-slate-200 mb-6"></i>
+
+        <h2 class="text-5xl font-black text-slate-300 italic uppercase tracking-tighter">II Jornada (2027)</h2>
+
+        <p class="text-slate-400 mt-4 font-light italic">Planejamento em curso para a próxima edição da Jornada de Estudos Linguísticos.</p>
+
+        <button onclick="switchEdition('2026')" class="mt-10 text-fci-red font-bold hover:underline">Voltar para a I Jornada (2026)</button>
+
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <footer id="inscricao" class="bg-fci-navy text-white py-24 px-4 text-center">
+
+        <div class="max-w-2xl mx-auto">
+
+            <h2 class="text-4xl font-black mb-6 italic">Prepare-se para o futuro das letras.</h2>
+
+            <p class="text-slate-400 mb-10 font-light">As inscrições garantem acesso a todas as palestras e certificado de participação.</p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSferoaONn60xAH2aMKEnrgzauwm7Fx71kI0RW21eQUzfKJEWA/viewform?usp=sharing" target="_blank" class="bg-fci-red text-white px-12 py-5 rounded-full font-black text-xl hover:bg-red-700 transition shadow-2xl inline-block shadow-red-900/20 transform hover:-translate-y-1">Fazer minha inscrição</a>
+
+            <div class="mt-20 pt-10 border-t border-white/5">
+
+                <p class="text-[10px] opacity-40 uppercase tracking-[0.5em] font-bold">© 2026 Faculdade Cultura Inglesa </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- --- BLOCO 3: JAVASCRIPT (LÓGICA) --- -->
+
     <script>
+
         function switchEdition(edition) {
+
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
             document.querySelectorAll('.edition-btn').forEach(btn => btn.classList.remove('active'));
+
             document.getElementById('edition-' + edition).classList.add('active');
+
             document.getElementById('btn-' + edition).classList.add('active');
+
             document.getElementById('nav-edition-label').innerText = 'Edição ' + edition;
+
             window.scrollTo(0,0);
+
         }
+
     </script>
+
 </body>
-</html>
+
+</html> eu quero que a palestra da cora coralina de sexta feira apareça em negrito e sem itálico. E que os nomes das outras monitoras apareçam junto com a ana sara . AindA NÃO APARECE DEVE TER ALGO ERRADO NAS LINHAS Ana Sara Alves</span></p>
+
+<span class="font-black text-slate-900">Luisa Rechtman</span></p>
+
+<span class="font-black text-slate-900">Marcela Souza</span></p>
+
+<span class="font-black text-slate-900">Ana Brito</span></p>
+
+<span class="font-black text-slate-900">Laura Souza</span></p>
+
+<span class="font-black text-slate-900">Luiza Baldo</span></p> 
