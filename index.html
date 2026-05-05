@@ -28,6 +28,22 @@
         
         /* Smooth transition para links */
         a { transition: all 0.3s ease; }
+
+        /* Links das sessões de comunicações orais */
+        .eixo-link {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-align: left;
+            padding: 2px 0;
+            text-decoration: none;
+        }
+        .eixo-link:hover {
+            color: #dc2626;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -102,7 +118,7 @@
                     <p class="text-slate-400 mb-8 font-light">Submissão de resumos para pôsteres e comunicações orais aberta a estudantes e pesquisadores.</p>
                     <div class="bg-white/5 p-4 rounded-xl mb-8 border border-white/10 text-center">
                         <p class="text-xs uppercase font-bold text-red-500 tracking-widest mb-1">Data limite</p>
-                        <p class="text-2xl font-bold italic text-white">08 de maio de 2026</p>
+                        <p class="text-2xl font-bold italic text-white">15 de maio de 2026</p>
                     </div>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSferoaONn60xAH2aMKEnrgzauwm7Fx71kI0RW21eQUzfKJEWA/viewform?usp=sharing" target="_blank" class="block w-full bg-white text-slate-900 py-4 rounded-2xl font-bold text-center hover:bg-slate-100 transition shadow-xl uppercase tracking-widest text-xs">formulário de inscrição</a>
                 </div>
@@ -139,7 +155,7 @@
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-fci-red"></div>
                                 <p class="text-xs font-bold text-slate-400">09:00</p>
-                                <p class="text-sm font-bold italic">Abertura: Isabela Villas Boas</p>
+                                <p class="text-sm font-bold italic">Abertura: Profa. Dra. Isabela Villas Boas</p>
   <p class="text-[10px] text-slate-500 italic">Auditório</p>
                             </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
@@ -161,57 +177,69 @@
                             </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-fci-red"></div>
-                                <p class="text-xs font-bold text-slate-400">11:30</p>
-                                <p class="text-sm font-bold">Palestra</p>
-<p class="text-[10px] text-slate-500 italic">Auditório</p>
+                                <p class="text-xs font-bold text-slate-400">11:40</p>
+                                <p class="text-sm font-bold">Encerramento das atividades da manhã</p>
                             </div>
-							
+                        </div>
+                        <div class="space-y-4 mt-8 pt-8 border-t border-slate-100">
                  <span class="text-[10px] font-black uppercase text-fci-red bg-red-50 px-3 py-1 rounded-full w-fit mb-4">Online - noite</span>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-fci-red"></div>
                                 <p class="text-xs font-bold text-slate-400">19:00</p>
                                 <p class="text-sm font-bold">Palestra</p>
 								<p class="text-[10px] text-slate-500 italic">Profa. Dra. Patricia Pereira Bertoli - UERJ</p>
+								 <a href="https://meet.google.com/gpd-emhu-drj" target="_blank" class="eixo-link">↗ Link de acesso</a>
                             </div>
 							 <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-fci-red"></div>
                                 <p class="text-xs font-bold text-slate-400">20:00</p>
                                 <p class="text-sm font-bold">Sessões de comunicações orais</p>
 								<p class="text-[10px] text-slate-500 italic">online</p>
+                                <!-- Links reformatados: fonte serifada itálica, pequena, alinhada à esquerda, cor clara -->
+                                <div class="flex flex-col gap-1 mt-2">
+                                    <a href="https://meet.google.com/qdv-svaf-vvc" target="_blank" class="eixo-link">↗ Eixo 1 — Tecnologia</a>
+                                    <a href="https://meet.google.com/oti-bgrs-dxz" target="_blank" class="eixo-link">↗ Eixo 2 — Ensino</a>
+                                    <a href="https://meet.google.com/vrr-abhg-gzx" target="_blank" class="eixo-link">↗ Eixo 3 — Literatura</a>
+                                    <a href="https://meet.google.com/utz-ztqf-axa" target="_blank" class="eixo-link">↗ Eixo 4 — Tradução</a>
+                                </div>
                             </div>
 							
                         </div>
                     </div>
                     <!-- Dia 22 (Sexta) -->
                     <div class="bg-white rounded-3xl p-8 shadow-sm border-b-8 border-blue-600 flex flex-col h-full">
-                        <span class="text-[10px] font-black uppercase text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-fit mb-4">Online - manhã</span>
+                        <span class="text-[10px] font-black uppercase text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-fit mb-4">Online</span>
                         <h3 class="text-xl font-bold mb-6">22 de maio (sexta)</h3>
                         <div class="space-y-4">
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-blue-600"></div>
                                 <p class="text-xs font-bold text-slate-400">08:00</p>
                                 <p class="text-sm font-bold">Ensinando inglês para tradutores</p>
-                                <p class="text-[10px] text-slate-500">Jane Godwin Cury - Braz-Tesol</p>            
+                                <p class="text-[10px] text-slate-500">Profa. Me. Jane Godwin Cury - Braz-Tesol</p>
+								 <a href="https://meet.google.com/wyi-extt-kyn" target="_blank" class="eixo-link">↗ Link de acesso</a>
                            </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-blue-600"></div>
                                 <p class="text-xs font-bold text-slate-400">09:00</p>
                                 <p class="text-sm font-bold">Gestão de projetos de tradução na era da IA</p>
-                                <p class="text-[10px] text-slate-500">Carolina Bisson de Souza - Unesp/Phorte</p>
+                                <p class="text-[10px] text-slate-500">Profa. Me. Carolina Bisson de Souza - Unesp/Phorte</p>
+								<a href="https://meet.google.com/sde-oerc-xjq" target="_blank" class="eixo-link">↗ Link de acesso</a>
                             </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-blue-600"></div>
                                 <p class="text-xs font-bold text-slate-400">10:00</p>
                                 <p class="text-sm font-bold">Decolonialidade</p>
-                                <p class="text-[10px] text-slate-500">Ana Paula Duboc</p>
+                                <p class="text-[10px] text-slate-500">Profa. Dra. Ana Paula Martinez Duboc</p>
+								<a href="https://meet.google.com/jbu-vhfv-ycr" target="_blank" class="eixo-link">↗ Link de acesso</a>
                             </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-blue-600"></div>
                                 <p class="text-xs font-bold text-slate-400">11:00 - 11:40</p>
                                <p class="text-sm font-bold">De Cora Coralina para As Coras - Conexões Femininas : a importância do legado</p>
 <p class="text-[10px] text-slate-500">Gisela Belluzzo de Almeida Salles</p>
+                               <a href="https://meet.google.com/wox-gqyo-jve" target="_blank" class="eixo-link">↗ Link de acesso</a>
                             </div>
-							
+							 
 					   </div>
                     </div>
                     <!-- Dia 23 (Sábado) -->
@@ -219,16 +247,37 @@
                         <span class="text-[10px] font-black uppercase text-slate-400 bg-slate-100 px-3 py-1 rounded-full w-fit mb-4">Online</span>
                         <h3 class="text-xl font-bold mb-6">23 de maio (sábado)</h3>
                         <div class="space-y-4">
+						<div class="pl-4 border-l-2 border-slate-100 relative">
+                                <div class="timeline-dot bg-slate-800"></div>
+                                <p class="text-xs font-bold text-slate-400">08:00</p>
+                                <p class="text-sm font-bold">Encontro final do GET</p>
+								 <p class="text-[10px] text-slate-500">Tradução, Reescrita e Manipulação da Fama Literária - André Lefevere</p>
+								 <a href="https://meet.google.com/qtr-ugvg-agz" target="_blank" class="eixo-link">↗ Link de acesso</a>
+								 </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-slate-800"></div>
                                 <p class="text-xs font-bold text-slate-400">09:00</p>
                                 <p class="text-sm font-bold text-slate-800">Palestra</p>
-                                 <p class="text-[10px] text-slate-500">Palestrante</p>
+                                 <p class="text-[10px] text-slate-500">Prof.Dr. Rodrigo Garcia Rosa</p>
+								 <a href="https://meet.google.com/zxw-dsjy-fnp" target="_blank" class="eixo-link">↗ Link de acesso</a>
                             </div>
-                            <div class="pl-4 border-l-2 border-slate-100 relative">
+							<div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-slate-800"></div>
                                 <p class="text-xs font-bold text-slate-400">10:00</p>
+                                <p class="text-sm font-bold">Palestra: Lifelong Learning</p>
+								 <p class="text-[10px] text-slate-500">Prof. Dr. Juan Lópes Linares</p>
+								 <a href="https://meet.google.com/bep-iobp-gki" target="_blank" class="eixo-link">↗ Link de acesso</a>
+								 </div>
+                            <div class="pl-4 border-l-2 border-slate-100 relative">
+                                <div class="timeline-dot bg-slate-800"></div>
+                                <p class="text-xs font-bold text-slate-400">11:00</p>
                                 <p class="text-sm font-bold">Sessões de comunicações orais</p>
+								<div class="flex flex-col gap-1 mt-2">
+                                    <a href="https://meet.google.com/qdv-svaf-vvc" target="_blank" class="eixo-link">↗ Eixo 1 — Tecnologia</a>
+                                    <a href="https://meet.google.com/oti-bgrs-dxz" target="_blank" class="eixo-link">↗ Eixo 2 — Ensino</a>
+                                    <a href="https://meet.google.com/vrr-abhg-gzx" target="_blank" class="eixo-link">↗ Eixo 3 — Literatura</a>
+                                    <a href="https://meet.google.com/utz-ztqf-axa" target="_blank" class="eixo-link">↗ Eixo 4 — Tradução</a>
+                                </div>
                             </div>
                             <div class="pl-4 border-l-2 border-slate-100 relative">
                                 <div class="timeline-dot bg-slate-800"></div>
@@ -281,14 +330,20 @@
                     </a>
                     <div class="bg-red-50 py-3 px-6 rounded-xl inline-flex items-center gap-3">
                         <i class="fa-solid fa-user-graduate text-fci-red text-xs"></i>
-                        <p class="text-sm font-bold text-slate-700">Monitoria:
-<div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm font-black text-slate-900">
-                            <span>Ana Sara Alves,</span>
-                            <span>Luisa Rechtman,</span>
-                            <span>Marcela Souza,</span>
-                            <span>Ana Brito,</span>
-                            <span>Laura Souza,</span>
-                            <span>Luiza Baldo</span>
+                       <p class="text-sm font-bold text-slate-700">Monitoria</p>
+                        </div>
+                            
+							<ul class="space-y-1 text-sm text-slate-800">
+                            <li>Amanda Figueiredo</li>
+                            <li>Ana Brito</li>
+                            <li>Giovanna Marques</li>
+                            <li>Laura Souza</li>
+                            <li>Luisa Rechtman</li>
+                            <li>Luiza Baldo</li>
+                            <li>Marcela Souza</li>
+                            <li>Rodrigo Seguchi</li>
+                            <li>Vitória Campos</li>
+                        </ul>
                     </div>
                 </div>
             </div>
