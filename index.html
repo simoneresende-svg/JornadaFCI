@@ -44,6 +44,11 @@
             color: #dc2626;
             text-decoration: underline;
         }
+
+        /* Galeria */
+        .gallery-item img { transition: transform 0.4s ease; }
+        #lightbox { display: none; }
+        #lightbox.open { display: flex; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -66,6 +71,7 @@
             <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold">
                 <a href="#programacao" class="hover:text-fci-red transition">Programação</a>
                 <a href="#submissoes" class="hover:text-fci-red transition">Submissões</a>
+                <a href="#galeria" class="hover:text-fci-red transition">Galeria</a>
                 <a href="#comissao" class="hover:text-fci-red transition">Comissão</a>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSferoaONn60xAH2aMKEnrgzauwm7Fx71kI0RW21eQUzfKJEWA/viewform?usp=sharing" target="_blank" class="bg-fci-red text-white px-6 py-2.5 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-100">Inscrição</a>
             </div>
@@ -310,7 +316,215 @@
                 </div>
             </div>
         </section>
-               <!-- Comissão Organizadora e Monitoria Alinhada -->
+       
+        <!-- Galeria de Fotos -->
+        <section id="galeria" class="py-24 bg-white px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold mb-4 italic font-serif tracking-tight text-center">Galeria de fotos</h2>
+                <p class="text-center text-slate-400 mb-12 font-light">I Jornada de Estudos Linguísticos — maio de 2026</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1TgJ4nLDp9MecCXzHM5FwWzrZY9A8ugMb&sz=w600', 'https://drive.google.com/file/d/1TgJ4nLDp9MecCXzHM5FwWzrZY9A8ugMb/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1TgJ4nLDp9MecCXzHM5FwWzrZY9A8ugMb&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1xClgtEpzk7J7bGS1fqAD9Hx4CRSPJpHM&sz=w600', 'https://drive.google.com/file/d/1xClgtEpzk7J7bGS1fqAD9Hx4CRSPJpHM/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1xClgtEpzk7J7bGS1fqAD9Hx4CRSPJpHM&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1A-Wn9EYuiJvMefEUcA_qUde05qDXctf1&sz=w600', 'https://drive.google.com/file/d/1A-Wn9EYuiJvMefEUcA_qUde05qDXctf1/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1A-Wn9EYuiJvMefEUcA_qUde05qDXctf1&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=10FnAnzOk_mPWRTboQZQHOhSCD-Tjg5Y3&sz=w600', 'https://drive.google.com/file/d/10FnAnzOk_mPWRTboQZQHOhSCD-Tjg5Y3/view')">
+                            <img src="https://drive.google.com/thumbnail?id=10FnAnzOk_mPWRTboQZQHOhSCD-Tjg5Y3&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1X1BR5dnwdw0uwKEz3GVxjMn8_9rD7Y5G&sz=w600', 'https://drive.google.com/file/d/1X1BR5dnwdw0uwKEz3GVxjMn8_9rD7Y5G/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1X1BR5dnwdw0uwKEz3GVxjMn8_9rD7Y5G&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1oJveJlOnahG1xJoYHjIrOycM_C3zChQy&sz=w600', 'https://drive.google.com/file/d/1oJveJlOnahG1xJoYHjIrOycM_C3zChQy/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1oJveJlOnahG1xJoYHjIrOycM_C3zChQy&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1PdmJReUPOc0VwYR4d8DQv0QhGxK2Sb-v&sz=w600', 'https://drive.google.com/file/d/1PdmJReUPOc0VwYR4d8DQv0QhGxK2Sb-v/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1PdmJReUPOc0VwYR4d8DQv0QhGxK2Sb-v&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=17A2oADcN99vV1t0QAgfYhgYjq7Ffc0B4&sz=w600', 'https://drive.google.com/file/d/17A2oADcN99vV1t0QAgfYhgYjq7Ffc0B4/view')">
+                            <img src="https://drive.google.com/thumbnail?id=17A2oADcN99vV1t0QAgfYhgYjq7Ffc0B4&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1tTWNYq8EfuhBTn4U2DpNi0jOJXHkEF5p&sz=w600', 'https://drive.google.com/file/d/1tTWNYq8EfuhBTn4U2DpNi0jOJXHkEF5p/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1tTWNYq8EfuhBTn4U2DpNi0jOJXHkEF5p&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1cD8kLRKoP9oqu70WFvykBzs-pQ2_sB5_&sz=w600', 'https://drive.google.com/file/d/1cD8kLRKoP9oqu70WFvykBzs-pQ2_sB5_/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1cD8kLRKoP9oqu70WFvykBzs-pQ2_sB5_&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1TIUPE_0dFibsm0j_mgaz_XxfoeT0PcaF&sz=w600', 'https://drive.google.com/file/d/1TIUPE_0dFibsm0j_mgaz_XxfoeT0PcaF/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1TIUPE_0dFibsm0j_mgaz_XxfoeT0PcaF&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=158p0iBakbWvU4aHJiz21TAarMkVcIDxl&sz=w600', 'https://drive.google.com/file/d/158p0iBakbWvU4aHJiz21TAarMkVcIDxl/view')">
+                            <img src="https://drive.google.com/thumbnail?id=158p0iBakbWvU4aHJiz21TAarMkVcIDxl&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1s4bCn7MVOhEsBVZczavP_JIqGF-qTErp&sz=w600', 'https://drive.google.com/file/d/1s4bCn7MVOhEsBVZczavP_JIqGF-qTErp/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1s4bCn7MVOhEsBVZczavP_JIqGF-qTErp&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1FqK5jwe4B_CgqmkqRCwi9FFXIJ6byZWo&sz=w600', 'https://drive.google.com/file/d/1FqK5jwe4B_CgqmkqRCwi9FFXIJ6byZWo/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1FqK5jwe4B_CgqmkqRCwi9FFXIJ6byZWo&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1TNWn0lKT1EHKi4Eh08ZVGo2Abgpd7fFv&sz=w600', 'https://drive.google.com/file/d/1TNWn0lKT1EHKi4Eh08ZVGo2Abgpd7fFv/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1TNWn0lKT1EHKi4Eh08ZVGo2Abgpd7fFv&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1IqLjfu3mRKSolXG0f_YVQ5XO4Q00rSuz&sz=w600', 'https://drive.google.com/file/d/1IqLjfu3mRKSolXG0f_YVQ5XO4Q00rSuz/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1IqLjfu3mRKSolXG0f_YVQ5XO4Q00rSuz&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1exgYE3eUKbOhL6LWykjKq45x4WQ9HoMW&sz=w600', 'https://drive.google.com/file/d/1exgYE3eUKbOhL6LWykjKq45x4WQ9HoMW/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1exgYE3eUKbOhL6LWykjKq45x4WQ9HoMW&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1KiS8OLXXc4kDBuMQN5-rA5cQfzXzRNbF&sz=w600', 'https://drive.google.com/file/d/1KiS8OLXXc4kDBuMQN5-rA5cQfzXzRNbF/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1KiS8OLXXc4kDBuMQN5-rA5cQfzXzRNbF&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1pAE870bDuKb9_dprei4YzvA2mbkmyDiW&sz=w600', 'https://drive.google.com/file/d/1pAE870bDuKb9_dprei4YzvA2mbkmyDiW/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1pAE870bDuKb9_dprei4YzvA2mbkmyDiW&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=17cW2CLU28g9CMsGL_lJK4BUTVUiQLoXk&sz=w600', 'https://drive.google.com/file/d/17cW2CLU28g9CMsGL_lJK4BUTVUiQLoXk/view')">
+                            <img src="https://drive.google.com/thumbnail?id=17cW2CLU28g9CMsGL_lJK4BUTVUiQLoXk&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1uHzWH5ba9D9xThh2nKgZFkCUkFqWVJcS&sz=w600', 'https://drive.google.com/file/d/1uHzWH5ba9D9xThh2nKgZFkCUkFqWVJcS/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1uHzWH5ba9D9xThh2nKgZFkCUkFqWVJcS&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1wFicu2rDGEqQ9xZaT6JXFGcFQ5PhJ03e&sz=w600', 'https://drive.google.com/file/d/1wFicu2rDGEqQ9xZaT6JXFGcFQ5PhJ03e/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1wFicu2rDGEqQ9xZaT6JXFGcFQ5PhJ03e&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=16AmnT3qSeCe8yRxSBCOLyySztGWalCYO&sz=w600', 'https://drive.google.com/file/d/16AmnT3qSeCe8yRxSBCOLyySztGWalCYO/view')">
+                            <img src="https://drive.google.com/thumbnail?id=16AmnT3qSeCe8yRxSBCOLyySztGWalCYO&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1JiTGFbTUUOTjmSqlGAqw62FzCQPrAW1U&sz=w600', 'https://drive.google.com/file/d/1JiTGFbTUUOTjmSqlGAqw62FzCQPrAW1U/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1JiTGFbTUUOTjmSqlGAqw62FzCQPrAW1U&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=11_71-DNgKJlIe9lHaOBUYw3cAbaJGCL2&sz=w600', 'https://drive.google.com/file/d/11_71-DNgKJlIe9lHaOBUYw3cAbaJGCL2/view')">
+                            <img src="https://drive.google.com/thumbnail?id=11_71-DNgKJlIe9lHaOBUYw3cAbaJGCL2&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1GhcippLXCKk3fpmJR008sdyJdfz_OaaC&sz=w600', 'https://drive.google.com/file/d/1GhcippLXCKk3fpmJR008sdyJdfz_OaaC/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1GhcippLXCKk3fpmJR008sdyJdfz_OaaC&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1FzktGZS4-nk112ma13y_Z_uv_ffbzaG1&sz=w600', 'https://drive.google.com/file/d/1FzktGZS4-nk112ma13y_Z_uv_ffbzaG1/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1FzktGZS4-nk112ma13y_Z_uv_ffbzaG1&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=17GrmGgRu_hNVz9hLArOhwmGLu50lp4Nc&sz=w600', 'https://drive.google.com/file/d/17GrmGgRu_hNVz9hLArOhwmGLu50lp4Nc/view')">
+                            <img src="https://drive.google.com/thumbnail?id=17GrmGgRu_hNVz9hLArOhwmGLu50lp4Nc&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1qUUOQWkGc1ECWG7FVd8CqHwCbFVMIrBs&sz=w600', 'https://drive.google.com/file/d/1qUUOQWkGc1ECWG7FVd8CqHwCbFVMIrBs/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1qUUOQWkGc1ECWG7FVd8CqHwCbFVMIrBs&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1UZloOUbFmTQOi3jtSYk87YlTDrPTRSTJ&sz=w600', 'https://drive.google.com/file/d/1UZloOUbFmTQOi3jtSYk87YlTDrPTRSTJ/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1UZloOUbFmTQOi3jtSYk87YlTDrPTRSTJ&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1sybuR-WJrfGmdW57X2c-WqzavCNCHdD7&sz=w600', 'https://drive.google.com/file/d/1sybuR-WJrfGmdW57X2c-WqzavCNCHdD7/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1sybuR-WJrfGmdW57X2c-WqzavCNCHdD7&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1GsDguPXM0qwBYdyu_ZUx5pNDE-TCia56&sz=w600', 'https://drive.google.com/file/d/1GsDguPXM0qwBYdyu_ZUx5pNDE-TCia56/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1GsDguPXM0qwBYdyu_ZUx5pNDE-TCia56&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1-9elhAEVEVgCvG5NhLQo0lfenlEu_8-a&sz=w600', 'https://drive.google.com/file/d/1-9elhAEVEVgCvG5NhLQo0lfenlEu_8-a/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1-9elhAEVEVgCvG5NhLQo0lfenlEu_8-a&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1KmK5mUK1MY1amdtTHamHJfdu6Ser_L0S&sz=w600', 'https://drive.google.com/file/d/1KmK5mUK1MY1amdtTHamHJfdu6Ser_L0S/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1KmK5mUK1MY1amdtTHamHJfdu6Ser_L0S&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1JGDoeAIHSVEQ83ljanOnk-jKKbNcdWwi&sz=w600', 'https://drive.google.com/file/d/1JGDoeAIHSVEQ83ljanOnk-jKKbNcdWwi/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1JGDoeAIHSVEQ83ljanOnk-jKKbNcdWwi&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1MGG__U4TVmxn0lmh5aZEysNasKGSDRc3&sz=w600', 'https://drive.google.com/file/d/1MGG__U4TVmxn0lmh5aZEysNasKGSDRc3/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1MGG__U4TVmxn0lmh5aZEysNasKGSDRc3&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1w0axlyAp5GkY7mNW0FqKP_AlNcGYUYxK&sz=w600', 'https://drive.google.com/file/d/1w0axlyAp5GkY7mNW0FqKP_AlNcGYUYxK/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1w0axlyAp5GkY7mNW0FqKP_AlNcGYUYxK&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1ngHG-ns3EdiRHRQe0YkNELT66szG1BFP&sz=w600', 'https://drive.google.com/file/d/1ngHG-ns3EdiRHRQe0YkNELT66szG1BFP/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1ngHG-ns3EdiRHRQe0YkNELT66szG1BFP&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1L9-8YzKUbX48ecBNDSugJCCSFIiafFQi&sz=w600', 'https://drive.google.com/file/d/1L9-8YzKUbX48ecBNDSugJCCSFIiafFQi/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1L9-8YzKUbX48ecBNDSugJCCSFIiafFQi&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=13TD26DlRglOdDKZPp3cshChDsW1NcpG-&sz=w600', 'https://drive.google.com/file/d/13TD26DlRglOdDKZPp3cshChDsW1NcpG-/view')">
+                            <img src="https://drive.google.com/thumbnail?id=13TD26DlRglOdDKZPp3cshChDsW1NcpG-&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1iaFQ3KTGaLAR7vRoGN2uL8DUTMor7cPp&sz=w600', 'https://drive.google.com/file/d/1iaFQ3KTGaLAR7vRoGN2uL8DUTMor7cPp/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1iaFQ3KTGaLAR7vRoGN2uL8DUTMor7cPp&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1BPgnXFfv2BZE5PXCAHqJ_RjgLZ8CNJxB&sz=w600', 'https://drive.google.com/file/d/1BPgnXFfv2BZE5PXCAHqJ_RjgLZ8CNJxB/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1BPgnXFfv2BZE5PXCAHqJ_RjgLZ8CNJxB&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1raHIaChfwe4hdBhZV_rz-6wGSFK5S20N&sz=w600', 'https://drive.google.com/file/d/1raHIaChfwe4hdBhZV_rz-6wGSFK5S20N/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1raHIaChfwe4hdBhZV_rz-6wGSFK5S20N&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1zRO5tV8PWb7RU1y0LALQfUR7cT2USZP3&sz=w600', 'https://drive.google.com/file/d/1zRO5tV8PWb7RU1y0LALQfUR7cT2USZP3/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1zRO5tV8PWb7RU1y0LALQfUR7cT2USZP3&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1swGAG7rfizafIeX4UmMyOMgrw6jLINEM&sz=w600', 'https://drive.google.com/file/d/1swGAG7rfizafIeX4UmMyOMgrw6jLINEM/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1swGAG7rfizafIeX4UmMyOMgrw6jLINEM&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox('https://drive.google.com/thumbnail?id=1yOyvqzq1v-AosjGRFFTOgI8bXdfMtKA7&sz=w600', 'https://drive.google.com/file/d/1yOyvqzq1v-AosjGRFFTOgI8bXdfMtKA7/view')">
+                            <img src="https://drive.google.com/thumbnail?id=1yOyvqzq1v-AosjGRFFTOgI8bXdfMtKA7&sz=w600" alt="Foto da Jornada" loading="lazy"
+                                 class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" onclick="closeLightbox()" class="fixed inset-0 bg-black/90 z-[999] hidden items-center justify-center p-4">
+            <button onclick="closeLightbox()" class="absolute top-5 right-6 text-white text-4xl font-bold leading-none hover:text-red-400 transition">&times;</button>
+            <button onclick="prevPhoto(event)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl font-bold hover:text-red-400 transition px-3">&#8249;</button>
+            <button onclick="nextPhoto(event)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl font-bold hover:text-red-400 transition px-3">&#8250;</button>
+            <img id="lightbox-img" src="" alt="Foto ampliada"
+                 class="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl object-contain"
+                 onclick="event.stopPropagation()">
+            <a id="lightbox-link" href="" target="_blank"
+               class="absolute bottom-6 text-white/50 text-xs hover:text-white transition">
+                Abrir no Google Drive
+            </a>
+        </div>
+        <!-- Comissão Organizadora e Monitoria Alinhada -->
         <section id="comissao" class="py-24 bg-white">
             <div class="max-w-xl mx-auto px-4 text-center">
                 <h2 class="text-3xl font-bold mb-12 italic font-serif">Comissão organizadora</h2>
@@ -397,6 +611,89 @@
     </div>
     <!-- --- BLOCO 3: JAVASCRIPT (LÓGICA) --- -->
     <script>
+
+        // Galeria lightbox
+        const _photos = [
+            { thumb: 'https://drive.google.com/thumbnail?id=1TgJ4nLDp9MecCXzHM5FwWzrZY9A8ugMb&sz=w1200', full: 'https://drive.google.com/file/d/1TgJ4nLDp9MecCXzHM5FwWzrZY9A8ugMb/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1xClgtEpzk7J7bGS1fqAD9Hx4CRSPJpHM&sz=w1200', full: 'https://drive.google.com/file/d/1xClgtEpzk7J7bGS1fqAD9Hx4CRSPJpHM/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1A-Wn9EYuiJvMefEUcA_qUde05qDXctf1&sz=w1200', full: 'https://drive.google.com/file/d/1A-Wn9EYuiJvMefEUcA_qUde05qDXctf1/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=10FnAnzOk_mPWRTboQZQHOhSCD-Tjg5Y3&sz=w1200', full: 'https://drive.google.com/file/d/10FnAnzOk_mPWRTboQZQHOhSCD-Tjg5Y3/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1X1BR5dnwdw0uwKEz3GVxjMn8_9rD7Y5G&sz=w1200', full: 'https://drive.google.com/file/d/1X1BR5dnwdw0uwKEz3GVxjMn8_9rD7Y5G/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1oJveJlOnahG1xJoYHjIrOycM_C3zChQy&sz=w1200', full: 'https://drive.google.com/file/d/1oJveJlOnahG1xJoYHjIrOycM_C3zChQy/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1PdmJReUPOc0VwYR4d8DQv0QhGxK2Sb-v&sz=w1200', full: 'https://drive.google.com/file/d/1PdmJReUPOc0VwYR4d8DQv0QhGxK2Sb-v/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=17A2oADcN99vV1t0QAgfYhgYjq7Ffc0B4&sz=w1200', full: 'https://drive.google.com/file/d/17A2oADcN99vV1t0QAgfYhgYjq7Ffc0B4/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1tTWNYq8EfuhBTn4U2DpNi0jOJXHkEF5p&sz=w1200', full: 'https://drive.google.com/file/d/1tTWNYq8EfuhBTn4U2DpNi0jOJXHkEF5p/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1cD8kLRKoP9oqu70WFvykBzs-pQ2_sB5_&sz=w1200', full: 'https://drive.google.com/file/d/1cD8kLRKoP9oqu70WFvykBzs-pQ2_sB5_/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1TIUPE_0dFibsm0j_mgaz_XxfoeT0PcaF&sz=w1200', full: 'https://drive.google.com/file/d/1TIUPE_0dFibsm0j_mgaz_XxfoeT0PcaF/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=158p0iBakbWvU4aHJiz21TAarMkVcIDxl&sz=w1200', full: 'https://drive.google.com/file/d/158p0iBakbWvU4aHJiz21TAarMkVcIDxl/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1s4bCn7MVOhEsBVZczavP_JIqGF-qTErp&sz=w1200', full: 'https://drive.google.com/file/d/1s4bCn7MVOhEsBVZczavP_JIqGF-qTErp/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1FqK5jwe4B_CgqmkqRCwi9FFXIJ6byZWo&sz=w1200', full: 'https://drive.google.com/file/d/1FqK5jwe4B_CgqmkqRCwi9FFXIJ6byZWo/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1TNWn0lKT1EHKi4Eh08ZVGo2Abgpd7fFv&sz=w1200', full: 'https://drive.google.com/file/d/1TNWn0lKT1EHKi4Eh08ZVGo2Abgpd7fFv/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1IqLjfu3mRKSolXG0f_YVQ5XO4Q00rSuz&sz=w1200', full: 'https://drive.google.com/file/d/1IqLjfu3mRKSolXG0f_YVQ5XO4Q00rSuz/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1exgYE3eUKbOhL6LWykjKq45x4WQ9HoMW&sz=w1200', full: 'https://drive.google.com/file/d/1exgYE3eUKbOhL6LWykjKq45x4WQ9HoMW/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1KiS8OLXXc4kDBuMQN5-rA5cQfzXzRNbF&sz=w1200', full: 'https://drive.google.com/file/d/1KiS8OLXXc4kDBuMQN5-rA5cQfzXzRNbF/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1pAE870bDuKb9_dprei4YzvA2mbkmyDiW&sz=w1200', full: 'https://drive.google.com/file/d/1pAE870bDuKb9_dprei4YzvA2mbkmyDiW/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=17cW2CLU28g9CMsGL_lJK4BUTVUiQLoXk&sz=w1200', full: 'https://drive.google.com/file/d/17cW2CLU28g9CMsGL_lJK4BUTVUiQLoXk/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1uHzWH5ba9D9xThh2nKgZFkCUkFqWVJcS&sz=w1200', full: 'https://drive.google.com/file/d/1uHzWH5ba9D9xThh2nKgZFkCUkFqWVJcS/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1wFicu2rDGEqQ9xZaT6JXFGcFQ5PhJ03e&sz=w1200', full: 'https://drive.google.com/file/d/1wFicu2rDGEqQ9xZaT6JXFGcFQ5PhJ03e/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=16AmnT3qSeCe8yRxSBCOLyySztGWalCYO&sz=w1200', full: 'https://drive.google.com/file/d/16AmnT3qSeCe8yRxSBCOLyySztGWalCYO/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1JiTGFbTUUOTjmSqlGAqw62FzCQPrAW1U&sz=w1200', full: 'https://drive.google.com/file/d/1JiTGFbTUUOTjmSqlGAqw62FzCQPrAW1U/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=11_71-DNgKJlIe9lHaOBUYw3cAbaJGCL2&sz=w1200', full: 'https://drive.google.com/file/d/11_71-DNgKJlIe9lHaOBUYw3cAbaJGCL2/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1GhcippLXCKk3fpmJR008sdyJdfz_OaaC&sz=w1200', full: 'https://drive.google.com/file/d/1GhcippLXCKk3fpmJR008sdyJdfz_OaaC/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1FzktGZS4-nk112ma13y_Z_uv_ffbzaG1&sz=w1200', full: 'https://drive.google.com/file/d/1FzktGZS4-nk112ma13y_Z_uv_ffbzaG1/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=17GrmGgRu_hNVz9hLArOhwmGLu50lp4Nc&sz=w1200', full: 'https://drive.google.com/file/d/17GrmGgRu_hNVz9hLArOhwmGLu50lp4Nc/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1qUUOQWkGc1ECWG7FVd8CqHwCbFVMIrBs&sz=w1200', full: 'https://drive.google.com/file/d/1qUUOQWkGc1ECWG7FVd8CqHwCbFVMIrBs/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1UZloOUbFmTQOi3jtSYk87YlTDrPTRSTJ&sz=w1200', full: 'https://drive.google.com/file/d/1UZloOUbFmTQOi3jtSYk87YlTDrPTRSTJ/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1sybuR-WJrfGmdW57X2c-WqzavCNCHdD7&sz=w1200', full: 'https://drive.google.com/file/d/1sybuR-WJrfGmdW57X2c-WqzavCNCHdD7/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1GsDguPXM0qwBYdyu_ZUx5pNDE-TCia56&sz=w1200', full: 'https://drive.google.com/file/d/1GsDguPXM0qwBYdyu_ZUx5pNDE-TCia56/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1-9elhAEVEVgCvG5NhLQo0lfenlEu_8-a&sz=w1200', full: 'https://drive.google.com/file/d/1-9elhAEVEVgCvG5NhLQo0lfenlEu_8-a/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1KmK5mUK1MY1amdtTHamHJfdu6Ser_L0S&sz=w1200', full: 'https://drive.google.com/file/d/1KmK5mUK1MY1amdtTHamHJfdu6Ser_L0S/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1JGDoeAIHSVEQ83ljanOnk-jKKbNcdWwi&sz=w1200', full: 'https://drive.google.com/file/d/1JGDoeAIHSVEQ83ljanOnk-jKKbNcdWwi/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1MGG__U4TVmxn0lmh5aZEysNasKGSDRc3&sz=w1200', full: 'https://drive.google.com/file/d/1MGG__U4TVmxn0lmh5aZEysNasKGSDRc3/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1w0axlyAp5GkY7mNW0FqKP_AlNcGYUYxK&sz=w1200', full: 'https://drive.google.com/file/d/1w0axlyAp5GkY7mNW0FqKP_AlNcGYUYxK/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1ngHG-ns3EdiRHRQe0YkNELT66szG1BFP&sz=w1200', full: 'https://drive.google.com/file/d/1ngHG-ns3EdiRHRQe0YkNELT66szG1BFP/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1L9-8YzKUbX48ecBNDSugJCCSFIiafFQi&sz=w1200', full: 'https://drive.google.com/file/d/1L9-8YzKUbX48ecBNDSugJCCSFIiafFQi/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=13TD26DlRglOdDKZPp3cshChDsW1NcpG-&sz=w1200', full: 'https://drive.google.com/file/d/13TD26DlRglOdDKZPp3cshChDsW1NcpG-/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1iaFQ3KTGaLAR7vRoGN2uL8DUTMor7cPp&sz=w1200', full: 'https://drive.google.com/file/d/1iaFQ3KTGaLAR7vRoGN2uL8DUTMor7cPp/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1BPgnXFfv2BZE5PXCAHqJ_RjgLZ8CNJxB&sz=w1200', full: 'https://drive.google.com/file/d/1BPgnXFfv2BZE5PXCAHqJ_RjgLZ8CNJxB/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1raHIaChfwe4hdBhZV_rz-6wGSFK5S20N&sz=w1200', full: 'https://drive.google.com/file/d/1raHIaChfwe4hdBhZV_rz-6wGSFK5S20N/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1zRO5tV8PWb7RU1y0LALQfUR7cT2USZP3&sz=w1200', full: 'https://drive.google.com/file/d/1zRO5tV8PWb7RU1y0LALQfUR7cT2USZP3/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1swGAG7rfizafIeX4UmMyOMgrw6jLINEM&sz=w1200', full: 'https://drive.google.com/file/d/1swGAG7rfizafIeX4UmMyOMgrw6jLINEM/view' },
+            { thumb: 'https://drive.google.com/thumbnail?id=1yOyvqzq1v-AosjGRFFTOgI8bXdfMtKA7&sz=w1200', full: 'https://drive.google.com/file/d/1yOyvqzq1v-AosjGRFFTOgI8bXdfMtKA7/view' },
+        ];
+        let _current = 0;
+        function openLightbox(thumb, full) {
+            _current = _photos.findIndex(p => p.thumb === thumb);
+            _showPhoto(_current);
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        function _showPhoto(i) {
+            document.getElementById('lightbox-img').src = _photos[i].thumb;
+            document.getElementById('lightbox-link').href = _photos[i].full;
+        }
+        function prevPhoto(e) {
+            e.stopPropagation();
+            _current = (_current - 1 + _photos.length) % _photos.length;
+            _showPhoto(_current);
+        }
+        function nextPhoto(e) {
+            e.stopPropagation();
+            _current = (_current + 1) % _photos.length;
+            _showPhoto(_current);
+        }
+        document.addEventListener('keydown', e => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'ArrowRight') nextPhoto(e);
+            if (e.key === 'ArrowLeft')  prevPhoto(e);
+            if (e.key === 'Escape')     closeLightbox();
+        });
+
         function switchEdition(edition) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.edition-btn').forEach(btn => btn.classList.remove('active'));
